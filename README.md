@@ -96,7 +96,7 @@ Identifies understaffed suites and triggers *syngo Virtual Cockpit*-style tele-p
 Candidate quality is evaluated as a constrained optimization problem:
 
 $$
-\mathrm{Best\ Candidate} = \underset{c \in \mathrm{Eligible\ Candidates}}{\operatorname{argmax}}\left(\mathrm{Queue\ Relief} + \mathrm{Fatigue\ Relief} - \mathrm{Travel\ Cost}\right)
+\mathrm{Best\ Candidate} = \underset{c \in \mathrm{Eligible\ Candidates}}{\mathrm{argmax}}\left(\mathrm{Queue\ Relief} + \mathrm{Fatigue\ Relief} - \mathrm{Travel\ Cost}\right)
 $$
 
 ### 3. Predictive Simulation Before Commitment
@@ -124,7 +124,7 @@ No move can ever execute directly from `PENDING`. If an agent or user attempts i
 Every bottleneck detection, proposal, simulation, approval, execution, rejection, and constraint tweak is immutably logged with a 64-character SHA-256 digest:
 
 $$
-\operatorname{SHA256}(\text{timestamp} \parallel \text{action\_type} \parallel \text{actor\_id} \parallel \text{entity\_id})
+\mathrm{SHA256}(\text{timestamp} \parallel \text{action\_type} \parallel \text{actor\_id} \parallel \text{entity\_id})
 $$
 
 ### 6. Communication Drafting, With Review
