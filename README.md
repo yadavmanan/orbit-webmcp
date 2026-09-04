@@ -125,10 +125,13 @@ Every bottleneck detection, proposal, simulation, approval, execution, rejection
 
 $$
 \mathrm{SHA256}\left(
-\text{timestamp} \parallel
-\text{action\_type} \parallel
-\text{actor\_id} \parallel
-\text{entity\_id}
+\mathrm{timestamp}
+\parallel
+\mathrm{action\_type}
+\parallel
+\mathrm{actor\_id}
+\parallel
+\mathrm{entity\_id}
 \right)
 $$
 
