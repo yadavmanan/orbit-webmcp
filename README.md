@@ -119,12 +119,17 @@ $$
 
 No move can ever execute directly from `PENDING`. If an agent or user attempts it, the server returns an explicit HTTP 400 rejection: **"Move MUST be approved by human coordinator first."** Humans stay in total control.
 
-### 5. A Cryptographic Compliance Trail
+## 5. A Cryptographic Compliance Trail
 
 Every bottleneck detection, proposal, simulation, approval, execution, rejection, and constraint tweak is immutably logged with a 64-character SHA-256 digest:
 
 $$
-\mathrm{SHA256}(\text{timestamp} \parallel \text{action\_type} \parallel \text{actor\_id} \parallel \text{entity\_id})
+\mathrm{SHA256}\left(
+\text{timestamp} \parallel
+\text{action\_type} \parallel
+\text{actor\_id} \parallel
+\text{entity\_id}
+\right)
 $$
 
 ### 6. Communication Drafting, With Review
